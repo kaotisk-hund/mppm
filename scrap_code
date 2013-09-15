@@ -1,0 +1,41 @@
+<!-- The AJAX script ready to go but not now, another time will be better :-D
+<script>
+function loadXMLDoc()
+{
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","show_projects.php?spr=1",true);
+xmlhttp.send();
+}
+</script>
+-->
+
+<!-- On/off switch for one day to use for hiding the projects or something
+            <div class='small-2 column'>
+                <div class="switch tiny round">
+                    <input id="x" name="switch-x" type="radio" checked>
+                    <label for="x" onclick="">Off</label>
+                    <input id="x1" name="switch-x" type="radio">
+                    <label for="x1" onclick="">On</label>
+                </div>
+            </div>
+-->
+
+<!-- AJAX button and myDiv for placing xmlhttp.. not sure how is called :-P
+            <div id="myDiv"></div>
+            <button type="button" onclick="loadXMLDoc()">Show Projects</button>
+-->
