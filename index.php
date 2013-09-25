@@ -5,6 +5,7 @@ include 'projects.php';
 include 'tickets.php';
 include 'forms.php';
 include 'head.php';
+include 'footnotes.php';
 include 'footer.php';
 // Initiate variables
 $menu=$_GET['menu'];
@@ -109,7 +110,7 @@ include 'sidebar.php';
 //Closing div section for sidebar
 echo '</div></div></div>';
 //FOOTNOTES
-include 'footnotes.php';
+footnotes();
 
 //FOOTER
 footer();

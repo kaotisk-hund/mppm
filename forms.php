@@ -2,9 +2,10 @@
 
 function new_project_form(){
 echo '
-<form data-abide action="create_project.php" method="post">
+<form data-abide action="manager.php" method="post">
     <fieldset>
         <legend>New project</legend>
+        <input type="hidden" name="manager" value="1"/>
         <input class="larg-4 column" type="text" name="title" value="Title"/>
         <textarea name="description">Description</textarea>
         <input type="date" required name="start_date" value="Start Date"/>
@@ -37,9 +38,10 @@ function new_ticket_form(){
     $status_index[2]='pending';
     $status_index[3]='closed';
     echo '
-<form class="custom" action="create_ticket.php" method="post">
+<form class="custom" action="manager.php" method="post">
     <fieldset>
         <legend>New ticket</legend>
+        <input type="hidden" name="manager" value="2"/>
         <input type="text" name="title" value="Title"/>
         <textarea type="text" name="description">Description</textarea>
         <div class="row"><div class="large-6 column"><select id="customDropdown1" name="project_assigned">
@@ -70,9 +72,4 @@ function login_form(){
     echo '</form>';
 }
 
-
-
-function debug(){
-    echo md5("123456");
-}
 ?>
