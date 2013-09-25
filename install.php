@@ -1,11 +1,5 @@
 <?php
-// Variables
-$db_user=mysql_real_escape_string($_POST["db_user"]);
-$db_pass=mysql_real_escape_string($_POST["db_pass"]);
-$db_name=mysql_real_escape_string($_POST["db_name"]);
-$db_server=mysql_real_escape_string($_POST["db_server"]);
-$user=mysql_real_escape_string($_POST["user"]);
-$pass=md5(mysql_real_escape_string($_POST["pass"]));
+
 
 $stage=$_POST["stage"];
 include 'head.php';
@@ -119,7 +113,8 @@ $ip = "'.$db_server.'";
 $user = "'.$db_user.'";
 $pass = "'.$db_pass.'";
 $db = "'.$db_name.'";
-?>';
+?>
+';
      fwrite($file, $string);
      fclose($file);
 }
@@ -135,6 +130,14 @@ elseif($stage=="2"){
 }
 // Creating database
 elseif($stage=="3"){
+    // Variables
+    $db_user=mysql_real_escape_string($_POST["db_user"]);
+    $db_pass=mysql_real_escape_string($_POST["db_pass"]);
+    $db_name=mysql_real_escape_string($_POST["db_name"]);
+    $db_server=mysql_real_escape_string($_POST["db_server"]);
+    $user=mysql_real_escape_string($_POST["user"]);
+    $pass=md5(mysql_real_escape_string($_POST["pass"]));
+
     create_database($db_server,$db_user,$db_pass,$db_name);
     create_tables($db_server,$db_user,$db_pass,$db_name);
     register_user($db_server,$db_user,$db_pass,$db_name,$user,$pass);
