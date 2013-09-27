@@ -55,6 +55,9 @@ class project {
 //            header("refresh:0;url=index.php?menu=1,2&pr=$pr");
 //        }
 //    }
+    function updateProject(){
+        
+    }
 }
 
 ?>
