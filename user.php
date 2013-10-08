@@ -7,25 +7,10 @@ $password = md5($_POST["password"]);
 
 if($username<>""){
     include 'settings.php';
-//    $con=mysqli_connect($ip,$user,$pass,"mppm");
-//    // Check connection
-//    if (mysqli_connect_errno($con)){
-//        echo "Failed to connect to MySQL: " . mysqli_connect_error();
-//    }
-//    
-//    //$link = mysql_connect($ip, $user, $pass) or die('Could not connect: ' . mysql_error());
-//    //mysql_select_db($db) or die('Could not select database');
-//    
-//    // Find username
-//    $query = "SELECT * FROM users WHERE `username`='$username'";
-//    $result = mysqli_query($con,$query);
-//    echo $;
-    
-
 
 // CONNECT TO THE DATABASE
 
-    $mysqli = new mysqli($ip, $user, $pass, "mppm");
+    $mysqli = new mysqli($ip, $user, $pass, $db);
     if (mysqli_connect_errno()) {
         printf("Connect failed: %s\n", mysqli_connect_error());
         exit();

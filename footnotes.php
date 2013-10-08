@@ -1,7 +1,7 @@
 <?php
 function footnotes(){
     include 'variables.php';
-    echo '<footer class="row">
+    echo '</div></div></div><footer class="row">
         <div class="large-12 columns">
             <hr />
             <div class="row">
@@ -11,7 +11,7 @@ function footnotes(){
     echo '</p>
                 </div>
             </div>
-        </div>
+        <hr>a
     </footer>';
 }
 ?>
